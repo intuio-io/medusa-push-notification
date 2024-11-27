@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.config = void 0;
+// src/subscribers/sms/return-requested.ts
 const medusa_1 = require("@medusajs/medusa");
-async function handleOrderPlaced({ data, container }) {
+async function handleReturnRequested({ data, container }) {
     const pushService = container.resolve("pushNotificationService");
     const orderService = container.resolve("orderService");
     const order = await orderService.retrieve(data.id, {
@@ -11,20 +12,20 @@ async function handleOrderPlaced({ data, container }) {
     if (!order.customer_id)
         return;
     let notificationPayload = {
-        title: "Order Confirmed",
-        body: `Order #${order.display_id} has been confirmed!`,
+        title: "Return Request Received",
+        body: `Return request for order #${order.id} has been received.`,
         data: {
-            type: "order.placed",
+            type: "return.requested",
             orderId: order.id
         }
     };
     await pushService.sendCustomerNotification(order.customer_id, notificationPayload);
 }
-exports.default = handleOrderPlaced;
+exports.default = handleReturnRequested;
 exports.config = {
-    event: medusa_1.OrderService.Events.PLACED,
+    event: medusa_1.OrderService.Events.RETURN_REQUESTED,
     context: {
-        subscriberId: "order-placed-push-notification-handler",
+        subscriberId: "return-requested-push-notification-handler",
     },
 };
-//# sourceMappingURL=order-placed.js.map
+//# sourceMappingURL=return-requested.js.map

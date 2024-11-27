@@ -197,7 +197,7 @@ The plugin listens to the following events by default:
 - `order.canceled`
 - `order.items_returned`
 - `order.shipment_created`
-- `retrun.requested`
+- `return.requested`
 
 ## Development
 
