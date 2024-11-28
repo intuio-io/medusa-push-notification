@@ -1,6 +1,6 @@
 {
   "name": "medusa-push-notification-v1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Push notification plugin for Medusa e-commerce",
   "author": "Kris Rego",
   "license": "MIT",
