@@ -21,7 +21,7 @@ A plugin for Medusa e-commerce that adds push notification functionality. This p
 ## Installation
 
 ```bash
-npm install medusa-push-notification-v1
+npm install @intuio/medusa-push-notification@v1
 ```
 
 ## Configuration
@@ -32,7 +32,7 @@ Add to your `medusa-config.js`:
 const plugins = [
   // ... other plugins
   {
-    resolve: `medusa-plugin-push-notifications`,
+    resolve: `@intuio/medusa-push-notification@v1`,
   }
 ]
 ```
@@ -204,7 +204,7 @@ The plugin listens to the following events by default:
 ```bash
 # Clone the repository
 git clone your-repo-url
-cd medusa-plugin-push-notifications
+cd medusa-push-notifications
 
 # Install dependencies
 npm install

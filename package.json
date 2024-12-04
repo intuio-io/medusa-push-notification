@@ -1,8 +1,9 @@
 {
-  "name": "medusa-push-notification-v1",
-  "version": "1.0.1",
+  "name": "@intuio/medusa-push-notification",
+  "version": "1.0.0",
   "description": "Push notification plugin for Medusa e-commerce",
-  "author": "Kris Rego",
+  "main": "index.js",
+  "author": "Intuio",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
