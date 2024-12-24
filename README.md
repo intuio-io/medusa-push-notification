@@ -32,7 +32,7 @@ Add to your `medusa-config.js`:
 const plugins = [
   // ... other plugins
   {
-    resolve: `@intuio/medusa-push-notification@medusa-v1`,
+    resolve: `@intuio/medusa-push-notification`,
   }
 ]
 ```
